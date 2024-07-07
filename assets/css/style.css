@@ -1083,13 +1083,20 @@ address {
   background: hsl(0, 0%, 5%);
   padding-block: 20px;
   text-align: center;
+  align-items: center;
+  align-self: center;
 }
+
+
 
 .copyright {
   color: var(--gainsboro);
   font-size: var(--fs-5);
   margin-bottom: 10px;
+  justify-self: right;
+
 }
+
 
 .copyright a {
   color: inherit;
@@ -1313,7 +1320,7 @@ address {
   }
 
   .footer-bottom {
-    text-align: left;
+    text-align: center;
   }
 
   .copyright {
@@ -1321,7 +1328,8 @@ address {
   }
 
   .footer-bottom-list {
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
+    justify-content: center;
   }
 
   #about-us img {
@@ -1689,7 +1697,7 @@ address {
    */
 
   .footer-top .container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 50px;
   }
 
