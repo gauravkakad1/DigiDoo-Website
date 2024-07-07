@@ -1,0 +1,49 @@
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init("w-7uVGjj3m6yp4Mkq"); // Replace 'YOUR_USER_ID' with your EmailJS user ID
+    })();
+</script>
+
+
+<form class="form" id="contact-form">
+    <h2>CONTACT US</h2>
+    <p type="Name:"><input type="text" id="name" placeholder="Write your name here.."></input></p>
+    <p type="Email:"><input type="email" id="email" placeholder="Let us know how to contact you back.."></input></p>
+    <p type="mobile:"><input type="text" id="mobile" placeholder="Enter your Mobile Number.."></input></p>
+    <p type="Message:"><input type="text" id="message" placeholder="What would you like to tell us.."></input></p>
+    <button type="submit">Send Message</button>
+    <div style="display: flex;">
+        <span class="fa fa-phone"></span>+917397914579
+        <span class="fa fa-envelope-o"></span> admin@digidoomedia.co.in
+    </div>
+</form>
+<script type="text/javascript">
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Get form values
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        var mobile = document.getElementById('mobile').value;
+
+        // Send email using EmailJS
+        emailjs.send('service_6tb2q4g', 'template_qk8621o', {
+            from_name: name,
+            from_email: email,
+            from_mobile: mobile,
+            message: message
+        }).then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Your message has been sent successfully!');
+            document.getElementById('contact-form').reset();
+        }, function (error) {
+            console.log('FAILED...', error);
+            alert('Failed to send your message. Please try again later.');
+            document.getElementById('contact-form').reset();
+        });
+    });
+</script>
+
+<link href="css/formcss/form.css" rel="stylesheet">
