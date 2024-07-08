@@ -1,8 +1,8 @@
-## Flamingo-Boat-Tour_Website
+## DigiDoo Media Website
 
 <br>
 
-[View Demo](https://flamingo-boat-tour.onrender.com/)
+[View Live Demo](https://digidoo-website.onrender.com/)
 
 <br>
 ## Technologies used
